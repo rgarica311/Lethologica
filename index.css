@@ -1,0 +1,106 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: white;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5em;
+
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+}
+
+
+button {
+  background-color: slategray;
+  height: 5vh;
+  width: 7vw;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 2px;
+}
+
+input {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 35vw;
+  height: 5vh;
+  font-size: 1.5rem;
+  font-family: 'Montserrat', sans-serif
+}
+
+.input-container {
+  width: 43vw;
+  position: relative;
+  margin: 0 auto;
+  top: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.app-title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: max-content;
+  margin: 0 auto;
+  align-items: center;
+  top: 10%;
+}
+
+.letho{
+  font-size:2.5rem;
+  font-family: 'Baloo', sans-serif;
+}
+
+.desc {
+  font-family: 'Oswald', sans-serif;
+}
+
+.results{
+  height: 67vh;
+  position: relative;
+  top: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  justify-content: space-evenly;
+
+}
+
+.result-item-container{
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.block-span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.film-info {
+  width: 300px;
+  height: 278px;
+  overflow-y: scroll;
+  padding-left: 15px;
+}
+
+.tag, .overview, .date{
+  font-family: 'Montserrat', sans-serif
+}
+.title {
+  font-family: 'Baloo', sans-serif
+}
