@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Game</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Baloo|Montserrat|Oswald&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+  <script src="store.js"></script>
+  <script src="game.js"></script>
+
+
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li class="nav-el"><a href="index.html">Lethologica</a></li>
+        <li class="nav-el"><a href="game.html">Game</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="instructions">
+      <p>How well do you know movie posters? The faster you figure it out before the poster comes into focus the more points you get. Simple.</p>
+      <button class="start-game">START!</button>
+    </div>
+
+    <div class="stats">
+      <ul class="stats-list">
+        <li>POSTER:<span class="poster-num"></span></li>
+        <li>SCORE:<span class="score"></span></li>
+        <li>TIME:<span class="time"></span></li>
+      </ul>
+    </div>
+
+    <div class="genre-select-container">
+      <label class="genre-label" for="genre-select">Select genre:</label>
+      <select id="genre-select">
+        <option value="">Select a genre from the list</option>
+        <option value="Random">Random</option>
+      </select>
+      <label class="difficulty-label">Select difficulty:</label>
+      <select id="difficulty-select">
+        <option value="">Choose difficulty level</option>
+        <option value="Easy">Easy peasy lemon squeezy</option>
+        <option value="Challenging">Challenging</option>
+        <option value="Hard">Hard</option>
+        <option value="Difficult">Difficult difficult lemon difficult</option>
+      </select>
+      <button class="submit-genre">Submit</button>
+    </div>
+
+    <div class="game-content">
+      <div class="poster">
+      </div>
+      <div class="choices-container">
+        <form>
+          <fieldset>
+            <label>
+              <input class="choice0" name="choice" type="radio" required>
+              <span class="choice0"></span>
+            </label>
+            <label>
+              <input class="choice1" name="choice" type="radio" required>
+              <span class="choice1"></span>
+            </label>
+            <label>
+              <input class="choice2" name="choice" type="radio" required>
+              <span class="choice2"></span>
+            </label>
+            <label>
+              <input class="choice3" name="choice" type="radio" required>
+              <span class="choice3"></span>
+            </label>
+
+            <button type="submit" class="enter-button"><span class="button-text">ENTER!</span></button>
+
+          </fieldset>
+        </form>
+      </div>
+    </div>
+
+    <div class="times-up">Times Up!</div>
+
+    <div class="game-results">
+
+    </div>
+
+  </main>
+
+</body>

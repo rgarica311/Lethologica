@@ -84,7 +84,7 @@ async function getFilmInfo(ids) {
       let film = "film" + i
       console.log('film in getfilminfo', film)
       console.log(`reponse data check: "overview": ${response.data.overview}
-                         "posterPath": ${response.data.poster_path}
+                         "posterPa51ath": ${response.data.poster_path}
                         "releaseDate": ${response.data.release_date}
                             "tagline": ${response.data.tagline}
                               "title": ${response.data.title}`)
