@@ -38,9 +38,9 @@ main {
 
 button {
   background-color: slategray;
-  height: 30px;
+  height: 35px;
   width: 75px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   border-radius: 5px;
   font-family: 'Oswald', sans-serif;
   letter-spacing: 2px;
@@ -52,7 +52,7 @@ input {
   border: 1px solid black;
   border-radius: 5px;
   width: 35vw;
-  height: 5vh;
+  height: 35px;
   font-size: 1.5rem;
   font-family: 'Montserrat', sans-serif
 }
@@ -72,16 +72,11 @@ a {
   margin-right: 15px;
 }
 
-.genre-label {
-  display: block;
-}
-
-
 .input-container {
-  width: 43vw;
+  width: 40vw;
   position: relative;
   margin: 0 auto;
-  top: 15%;
+  top: 250px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -94,7 +89,7 @@ a {
   width: max-content;
   margin: 0 auto;
   align-items: center;
-  top: 10%;
+  top: 200px;
 }
 
 .letho{
@@ -137,119 +132,7 @@ a {
 .tag, .overview, .date{
   font-family: 'Montserrat', sans-serif
 }
+
 .title {
   font-family: 'Baloo', sans-serif
-}
-
-.instructions {
-  width: 20vw;
-  height: 10vh;
-  background-color: white;
-  position: relative;
-  margin: 0 auto;
-  top: 40vh;
-}
-
-.instructions p {
-  color: black;
-  font-family: 'Montserrat', sans-serif
-}
-
-.stats {
-  position: relative;
-  width: 80vw;
-  height: 40px;
-  margin: 0 auto;
-  top: 10vh;
-}
-
-.stats-list {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  list-style-type: none;
-}
-
-.stats-list li{
-  margin-right: 10px;
-  font-family: 'Montserrat', sans-serif
-}
-
-.genre-select-container{
-  width: max-content;
-  height: auto;
-  position: relative;
-  top: 40vh;
-  margin: 0 auto;
-}
-
-.game-content{
-  position: relative;
-  width: max-content;
-  margin: 0 auto;
-  top: 30vh;
-  display: flex;
-}
-
-.results {
-  display: none;
-}
-
-.game-results {
-  width: max-content;
-  position: relative;
-  margin: 0 auto;
-  margin-top: 15%;
-}
-
-
-
-.poster {
-  height: 261px;
-  width: 185px;
-  background-repeat: no-repeat;
-  margin-right: 20px;
-}
-
-.poster-num {
-  margin-left: 10px;
-}
-
-#genre-select, #difficulty-select {
-  height: 30px;
-}
-
-#genre-select {
-  margin-bottom: 10px;
-}
-
-fieldset {
-  display: flex;
-  height: 261px;
-}
-
-fieldset input {
-
-  width: max-content;
-}
-
-label {
-  margin-bottom: 10px;
-  display: block;
-}
-
-.times-up {
-  width: 300px;
-  height: 100px;
-  background-color: black;
-  margin: 0 auto;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  font-family: 'Baloo', sans-serif;
-  color: white;
-  border-radius: 5px;
-  font-size: 2.5rem;
-  z-index: 2;
-  position: relative;
 }
