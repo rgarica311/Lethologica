@@ -1,7 +1,7 @@
 let GENRESTORE = {
   pickRandomGenre() {
     let randIndex = randomNum(0, 20)
-    return this.genres[randIndex].id
+    return this.genres[randIndex].name
   },
   getSelectedGenreId(genre){
     let index = this.genres.findIndex(x => x.name === genre)
@@ -70,8 +70,8 @@ let GENREID_TOTEXT = {
   thirtyseven: 37
 }
 
-let currentScore = 0
-let posterNum = 0
+let currentScore
+let posterNum
 let genreId
 let choices
 let maxChoice
@@ -188,11 +188,11 @@ let time
 let x
 function countDown() {
 
-  time = 15
+  time = 5
   //console.log('time at top of countdown is', time)
   $('.time').html(`${time}`)
   let blurAmount = 7.5
-  $('.poster').css('filter', `blur(${blurAmount}px)` )
+  //$('.poster').css('filter', `blur(${blurAmount}px)` )
 
   x = setInterval(function(){
     time--
@@ -200,7 +200,7 @@ function countDown() {
       //console.log('time in interval', time)
       $('.time').html(`${time}`)
       blurAmount = blurAmount - .5
-      $('.poster').css('filter', `blur(${blurAmount}px)`)
+      //$('.poster').css('filter', `blur(${blurAmount}px)`)
     } else {
         showTimesUp()
         setTimeout(hideTimesUp, 2000)
@@ -236,31 +236,37 @@ let questionNum = 0
 
 function displayQuestion() {
   posterNum++
-  $('.game-content').show()
-  $('.poster-num').html(posterNum)
-  countDown()
-  let choiceElements = [".choice0", ".choice1", ".choice2", ".choice3"]
-  let choice
+  checkPosterNum()
+  if(posterNum < 11 ) {
+    $('form')[0].reset()
+    $('.game-content').show()
+    $('.poster-num').html(posterNum)
+    countDown()
+    let choiceElements = [".choice0", ".choice1", ".choice2", ".choice3"]
+    let choice
 
-  let randomOrderArray = ARRAYS.getRandomOrder()
+    let randomOrderArray = ARRAYS.getRandomOrder()
 
-  if(questionNum < STORE.length) {
+    if(questionNum < STORE.length) {
 
-    for(j=3; j>=0; j--){
-      let randIndex = randomNum(0, j)
-      console.log('debug for randIndex is', randIndex)
-      choice = choiceElements[randIndex]
-      console.log('debug for choice is', choice)
-      choiceElements.splice(randIndex, 1)
-      console.log('debug for choiceElements', choiceElements)
-      $(`input${choice}`).attr('value', `${STORE[questionNum].choices[randomOrderArray[j]]}`)
-      $(`span${choice}`).html(`${STORE[questionNum].choices[randomOrderArray[j]]}`)
-      $('.poster').css('background-image', `url( ${STORE[questionNum].posterUrl} )`)
+      for(j=3; j>=0; j--){
+        let randIndex = randomNum(0, j)
+        console.log('debug for randIndex is', randIndex)
+        choice = choiceElements[randIndex]
+        console.log('debug for choice is', choice)
+        choiceElements.splice(randIndex, 1)
+        console.log('debug for choiceElements', choiceElements)
+        $(`input${choice}`).attr('value', `${STORE[questionNum].choices[randomOrderArray[j]]}`)
+        $(`span${choice}`).html(`${STORE[questionNum].choices[randomOrderArray[j]]}`)
+        $('.poster').css('background-image', `url( ${STORE[questionNum].posterUrl} )`)
+      }
+    } else {
+        showScore()
     }
   } else {
-      showScore()
       clearInterval(x)
   }
+
 }
 
 function showScore() {
@@ -326,6 +332,7 @@ function showScore() {
     }
 
   }
+  $('.genre-select-container').show()
 }
 
 function generateStore(responsesArray) {
@@ -450,6 +457,12 @@ function getSelectedGenre() {
   $('.submit-genre').on('click', function(e){
     e.stopPropagation()
     $('.genre-select-container').hide()
+    $('.stats').show()
+    $('.game-results').hide()
+    currentScore = 0
+    console.log('currentScore', currentScore)
+    posterNum = 0
+    $('.score').html(`${currentScore}`)
     //console.log('genre button click')
     getMoviesById(genreId, selectedDiff)
   })
@@ -471,6 +484,7 @@ function startGame() {
 }
 
 function showInstructions() {
+  $('.game-over').hide()
   $('.stats').hide()
   $('.times-up').hide()
   $('.game-content').hide()
@@ -478,13 +492,27 @@ function showInstructions() {
   $('.game-results').hide()
   $('.start-game').on('click', function(e){
     e.stopPropagation()
-    $('.stats').show()
+
     $('.genre-select-container').show()
     $('.instructions').hide()
     startGame()
   })
   handleAnswerSelect()
+  checkPosterNum()
 
+}
+
+function checkPosterNum() {
+  if (posterNum > 10) {
+    $('.game-over').show()
+    setTimeout(hideGameOver, 3000)
+
+  }
+}
+
+function hideGameOver() {
+  $('.game-over').hide()
+  showScore()
 }
 
 $(showInstructions)

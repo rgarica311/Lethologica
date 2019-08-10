@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  background-color: white;
+  background: radial-gradient(circle, rgba(255,255,224,1) 13%, rgba(249,233,170,1) 63%, rgba(238,219,142,1) 100%);
   height: 100vh;
   width: 100vw;
   margin: 0;
@@ -45,9 +45,9 @@ a {
 }
 
 button {
-  background-color: slategray;
+  background-color: #c74130;
   height: 35px;
-  width: 75px;
+  width: 100%;
   font-size: 1rem;
   border-radius: 5px;
   font-family: 'Oswald', sans-serif;
@@ -62,16 +62,28 @@ main {
   position: relative;
 }
 
+
 .genre-label {
   display: block;
 }
 
+label.genre-label, label.difficulty-label {
+  margin-bottom: 0;
+}
+
+form, fieldset {
+  height: 100%;
+}
+
 .genre-select-container{
   width: max-content;
-  height: auto;
+  height: 200px;
   position: relative;
-  top: 30vh;
+  top: 150px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .game-results {
@@ -81,13 +93,23 @@ main {
   margin-top: 15%;
 }
 
-
-
 .poster {
   height: 261px;
   width: 185px;
   background-repeat: no-repeat;
   margin-right: 20px;
+  border: solid 2vmin black;
+  border-bottom-color:black;
+  border-left-color:#2f2f2f;
+  border-radius:2px;
+  border-right-color:#2f2f2f;
+  border-top-color:black;
+  box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
+  box-sizing:border-box;
+  display:inline-block;
+  position:relative;
+  text-align:center;
+  background-size: cover;
 }
 
 .poster-num {
@@ -95,17 +117,7 @@ main {
 }
 
 
-
-fieldset {
-  display: flex;
-  height: 261px;
-}
-
-fieldset input {
-  width: max-content;
-}
-
-.times-up {
+.times-up, .game-over {
   width: 300px;
   height: 100px;
   background-color: black;
@@ -124,7 +136,6 @@ fieldset input {
 .instructions {
   width: 20vw;
   height: 10vh;
-  background-color: white;
   position: relative;
   margin: 0 auto;
   top: 40vh;
@@ -167,11 +178,8 @@ fieldset input {
   height: 35px;
 }
 
-#genre-select {
-  margin-bottom: 10px;
-}
 
 label {
-  margin-bottom: 10px;
+  margin-bottom: 25px;
   display: block;
 }
