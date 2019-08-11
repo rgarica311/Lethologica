@@ -90,7 +90,7 @@ form, fieldset {
   width: max-content;
   position: relative;
   margin: 0 auto;
-  margin-top: 15%;
+  bottom: 100px;
 }
 
 .poster {
@@ -182,4 +182,10 @@ form, fieldset {
 label {
   margin-bottom: 25px;
   display: block;
+}
+
+@media screen and (max-width: 414px) {
+  .game-content:  {
+    flex-direction: column;
+  }
 }
