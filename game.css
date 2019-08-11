@@ -185,7 +185,10 @@ label {
 }
 
 @media screen and (max-width: 414px) {
-  .game-content:  {
+  .game-content  {
     flex-direction: column;
+    top: 10vh;
+    justify-content: space-evenly;
+    height: 60vh;
   }
 }
