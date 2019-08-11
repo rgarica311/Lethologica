@@ -290,6 +290,10 @@ function showScore() {
 
       case "Difficult":
       $('.game-results').html(`${MESSAGES[0].high.difficult}`)
+      break;
+
+      default:
+      $('.game-results').html(`${MESSAGES[0].high.easy}`)
 
     }
 
@@ -310,6 +314,11 @@ function showScore() {
 
       case "Difficult":
       $('.game-results').html(`${MESSAGES[1].mid.difficult}`)
+      break;
+
+      default:
+      $('.game-results').html(`${MESSAGES[0].mid.easy}`)
+
 
     }
 
@@ -329,6 +338,10 @@ function showScore() {
 
       case "Difficult":
       $('.game-results').html(`${MESSAGES[2].low.difficult}`)
+      break;
+
+      default:
+      $('.game-results').html(`${MESSAGES[0].low.easy}`)
     }
 
   }
@@ -409,6 +422,11 @@ async function getMoviesById(genreId, selectedDiff){
 
     case "Difficult":
     percentage = 1
+    break;
+
+    default:
+    percentage = .05
+    break;
   }
   let key = Object.keys(GENREID_TOTEXT).find(key => GENREID_TOTEXT[key] === genreId)
   //console.log('debug getMoviesById key', key)

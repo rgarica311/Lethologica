@@ -134,7 +134,7 @@ form, fieldset {
 }
 
 .instructions {
-  width: 20vw;
+  width: 200px;
   height: 10vh;
   position: relative;
   margin: 0 auto;
@@ -187,8 +187,29 @@ label {
 @media screen and (max-width: 414px) {
   .game-content  {
     flex-direction: column;
-    top: 10vh;
+    top: 0;
     justify-content: space-evenly;
-    height: 60vh;
+    height: 80vh;
+    align-items: center;
+  }
+
+  .poster {
+    margin-right: 0;
+  }
+
+  .stats {
+    top: 0;
+  }
+
+  .instructions {
+    top: 25vh;
+  }
+
+  label {
+    margin-bottom: 8px;
+  }
+
+  .times-up, .game-over {
+    top: -300px;
   }
 }
