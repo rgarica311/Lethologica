@@ -27,7 +27,9 @@
   </header>
 
   <main>
+
     <div class="instructions">
+      <h1>How To:</h1>
       <p>How well do you know movie posters? The faster you figure it out before the poster comes into focus the more points you get. Simple.</p>
       <button class="start-game">START!</button>
     </div>
@@ -41,12 +43,13 @@
     </div>
 
     <div class="genre-select-container">
-      <label class="genre-label" for="genre-select">Select genre:</label>
+      <label class="genre-label" for="genre-select">Select genre:
       <select id="genre-select">
         <option value="">Select a genre from the list</option>
         <option value="Random">Random</option>
       </select>
-      <label class="difficulty-label">Select difficulty:</label>
+      </label>
+      <label class="difficulty-label">Select difficulty:
       <select id="difficulty-select" required>
         <option value="">Choose difficulty level</option>
         <option value="Easy">Easy peasy lemon squeezy</option>
@@ -54,6 +57,7 @@
         <option value="Hard">Hard</option>
         <option value="Difficult">Difficult difficult lemon difficult</option>
       </select>
+      </label>
       <button class="submit-genre">Submit</button>
     </div>
 
@@ -63,22 +67,22 @@
       <div class="choices-container">
         <form>
           <fieldset>
-            <label>
-              <input class="choice0" name="choice" type="radio" required>
-              <span class="choice0"></span>
-            </label>
-            <label>
-              <input class="choice1" name="choice" type="radio" required>
-              <span class="choice1"></span>
-            </label>
-            <label>
-              <input class="choice2" name="choice" type="radio" required>
-              <span class="choice2"></span>
-            </label>
-            <label>
-              <input class="choice3" name="choice" type="radio" required>
-              <span class="choice3"></span>
-            </label>
+            <legend>Pick the right movie!</legend>
+
+            <input class="choice0" name="choice" type="radio" required>
+            <label for="choice0" id="choice0"></label>
+
+            <input class="choice1" name="choice" type="radio" required>
+            <label for="chocie1" id="choice1"></label>
+
+
+            <input class="choice2" name="choice" type="radio" required>
+            <label for="choice2" id="choice2"></label>
+
+
+            <input class="choice3" name="choice" type="radio" required>
+            <label for="choice3" id="choice3"></label>
+
 
             <button type="submit" class="enter-button"><span class="button-text">ENTER!</span></button>
 
