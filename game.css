@@ -21,6 +21,8 @@ header {
   width: 100%;
   position: fixed;
   top: 0;
+  background-color: #c74130;
+  z-index: 2;
 }
 
 nav {
