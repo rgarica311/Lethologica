@@ -43,13 +43,13 @@
     </div>
 
     <div class="genre-select-container">
-      <label class="genre-label" for="genre-select">Select genre:
+      <label class="genre-label" for="genre-select">Select genre:</label>
       <select id="genre-select">
         <option value="">Select a genre:</option>
         <option value="Random">Random</option>
       </select>
-      </label>
-      <label class="difficulty-label">Select difficulty:
+
+      <label for="difficulty-select" class="difficulty-label">Select difficulty:</label>
       <select id="difficulty-select" required>
         <option value="">Choose difficulty level</option>
         <option value="Easy">Easy peasy lemon squeezy</option>
@@ -57,7 +57,7 @@
         <option value="Hard">Hard</option>
         <option value="Difficult">Difficult difficult lemon difficult</option>
       </select>
-      </label>
+
       <button class="submit-genre">Submit</button>
     </div>
 
@@ -68,22 +68,22 @@
         <form>
           <fieldset>
             <legend>Pick the right movie!</legend>
-
-            <input class="choice0" name="choice" type="radio" required>
-            <label for="choice0" id="choice0"></label>
-
-            <input class="choice1" name="choice" type="radio" required>
-            <label for="chocie1" id="choice1"></label>
-
-
-            <input class="choice2" name="choice" type="radio" required>
-            <label for="choice2" id="choice2"></label>
-
-
-            <input class="choice3" name="choice" type="radio" required>
-            <label for="choice3" id="choice3"></label>
-
-
+            <label>
+            <input id="choice0" name="choice" type="radio" required>
+            <span id="choice00"></span>
+            </label>
+            <label>
+            <input id="choice1" name="choice" type="radio" required>
+            <span id="choice11"></span>
+            </label>
+            <label>
+            <input id="choice2" name="choice" type="radio" required>
+            <span id="choice22"></span>
+            </label>
+            <label>
+            <input id="choice3" name="choice" type="radio" required>
+            <span id="choice33"></span>
+            </label>
             <button type="submit" class="enter-button"><span class="button-text">ENTER!</span></button>
 
           </fieldset>
