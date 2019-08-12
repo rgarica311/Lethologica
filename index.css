@@ -126,6 +126,7 @@ a {
 }
 
 .film-info {
+  display: none;
   width: 300px;
   height: 278px;
   overflow-y: scroll;
@@ -153,5 +154,14 @@ a {
 
   .result-item-container {
     width: 90vw;
+    justify-content: center;
+  }
+
+
+}
+
+@media screen and (min-width: 411px) {
+  .film-info {
+    display: block;
   }
 }
