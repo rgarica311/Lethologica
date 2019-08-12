@@ -188,7 +188,7 @@ let time
 let x
 function countDown() {
 
-  time = 5
+  time = 15
   //console.log('time at top of countdown is', time)
   $('.time').html(`${time}`)
   let blurAmount = 7.5
@@ -242,8 +242,10 @@ function displayQuestion() {
     $('.game-content').show()
     $('.poster-num').html(posterNum)
     countDown()
-    let choiceElements = [".choice0", ".choice1", ".choice2", ".choice3"]
+    let choiceElements = ["#choice0", "#choice1", "#choice2", "#choice3"]
+    let choiceClassElements = [".choice0", ".choice1", ".choice2", ".choice3"]
     let choice
+    let choice_C_E
 
     let randomOrderArray = ARRAYS.getRandomOrder()
 
@@ -253,11 +255,13 @@ function displayQuestion() {
         let randIndex = randomNum(0, j)
         console.log('debug for randIndex is', randIndex)
         choice = choiceElements[randIndex]
+        choice_C_E = choiceClassElements[randIndex]
         console.log('debug for choice is', choice)
         choiceElements.splice(randIndex, 1)
+        choiceClassElements.splice(randIndex, 1)
         console.log('debug for choiceElements', choiceElements)
-        $(`input${choice}`).attr('value', `${STORE[questionNum].choices[randomOrderArray[j]]}`)
-        $(`span${choice}`).html(`${STORE[questionNum].choices[randomOrderArray[j]]}`)
+        $(`input${choice_C_E}`).attr('value', `${STORE[questionNum].choices[randomOrderArray[j]]}`)
+        $(`label${choice}`).html(`${STORE[questionNum].choices[randomOrderArray[j]]}`)
         $('.poster').css('background-image', `url( ${STORE[questionNum].posterUrl} )`)
       }
     } else {
