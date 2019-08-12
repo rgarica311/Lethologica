@@ -15,20 +15,21 @@ let CreditsStore =  {
   crew: [],
   mergedCredits() {
        let credits = []
+       console.log('CreditsStore contains:' + 'cast:' + this.cast + 'crew:' + this.crew)
 
-       if(this.crew[0] === null && this.cast[0] != null) {
+       if(this.crew.length < 1 && this.cast.length > 0) {
        //console.log('crew null cast not null')
          for(i=0; i<this.cast.length; i++){
            credits.push(this.cast[i].title)
          }
        }
-       if(this.cast[0] === null && this.crew[0] != null){
+       if(this.cast.length < 1 && this.crew.length > 0){
        //console.log('cast null crew not null')
          for(i=0; i<this.crew.length; i++){
            credits.push(this.crew[i].title)
          }
        }
-       if(this.cast[0] != null && this.crew[0] != null){
+       if(this.cast.length > 0 && this.crew.length > 0){
        //console.log('both not null')
          let castTitles = []
          let crewTitles = []
