@@ -76,7 +76,7 @@ a {
   width: 40vw;
   position: relative;
   margin: 0 auto;
-  top: 250px;
+  top: 150px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -89,7 +89,7 @@ a {
   width: max-content;
   margin: 0 auto;
   align-items: center;
-  top: 200px;
+  top: 100px;
 }
 
 .letho{
@@ -104,7 +104,7 @@ a {
 .results{
   height: 67vh;
   position: relative;
-  top: 20%;
+  top: 200px;
   display: flex;
   flex-wrap: wrap;
   padding: 30px;
@@ -127,6 +127,7 @@ a {
   height: 278px;
   overflow-y: scroll;
   padding-left: 15px;
+  padding-right: 15px;
 }
 
 .tag, .overview, .date{
