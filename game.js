@@ -213,10 +213,12 @@ function countDown() {
 
 function showTimesUp() {
   $('.times-up').show()
+  $('.enter-button').prop('disabled', true)
 }
 
 function hideTimesUp(){
   $('.times-up').hide()
+  $('.enter-button').prop('disabled', false)
   getMoviesById(genreId, selectedDiff)
 }
 
