@@ -143,6 +143,15 @@ a {
   font-family: 'Baloo', sans-serif
 }
 
+.error-image {
+  height: 390px;
+  width: 640px;
+  margin: 0 auto;
+  position: relative;
+  bottom: 450px;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 412px) {
   input {
     width: 60vw;

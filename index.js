@@ -224,17 +224,24 @@ async function getActorIds(terms) {
 
 
 function getActors() {
+  $('.error-image').hide()
+  closeError()
   $('.search').on('click', function(e){
     $('.results').empty()
     let actors
     actors = $('.input').val().split(',')
     console.log('actors length in getactors', actors.length)
     console.log('actors in getactors', actors)
-    console.log('actors[1] length', actors[1].length)
     if(actors.length != 2) {
-      alert('You must search for only 2 names')
+      console.log('running if less than 2')
+      $('.error-image').show()
+      $('.error-image').css('background-image', 'url(/Images/searchTwo.png)')
+      //setTimeout(hideError, 4000)
+      //alert('You must search for only 2 names')
     } else if (actors.length === 2 && actors[0].length === 0 || actors[1].length === 0) {
-      alert('you must search for only 2 names')
+        $('.error-image').show()
+        $('.error-image').css('background-image', 'url(/Images/searchTwo.png)')
+        //setTimeout(hideError, 4000)
     } else {
         getActorIds(actors).then(function(result){
           getCredits(result)
@@ -244,6 +251,13 @@ function getActors() {
 
   }
 
+function closeError() {
+  $('.error-image').on('click', function(e){
+    e.stopPropagation()
+    $('.error-image').hide()
+  })
+
+}
 
 
 $(getActors)

@@ -530,7 +530,6 @@ function checkPosterNum() {
   if (posterNum > 10) {
     $('.game-over').show()
     setTimeout(hideGameOver, 3000)
-
   }
 }
 
