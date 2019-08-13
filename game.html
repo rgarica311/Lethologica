@@ -68,25 +68,30 @@
         <form>
           <fieldset>
             <legend>Pick the right movie!</legend>
-            <label>
-            <input id="choice0" name="choice" type="radio" required>
-            <span id="choice00"></span>
-            </label>
-            <label>
-            <input id="choice1" name="choice" type="radio" required>
-            <span id="choice11"></span>
-            </label>
-            <label>
-            <input id="choice2" name="choice" type="radio" required>
-            <span id="choice22"></span>
-            </label>
-            <label>
-            <input id="choice3" name="choice" type="radio" required>
-            <span id="choice33"></span>
-            </label>
-            <button type="submit" class="enter-button"><span class="button-text">ENTER!</span></button>
+
+            <div class="form-input">
+              <input aria-labelledby="choice00" id="choice0" name="choice" type="radio" required>
+              <label for="choice0" id="choice00"></label>
+            </div>
+
+            <div class="form-input">
+              <input aria-labelledby="choice11" id="choice1" name="choice" type="radio" required>
+              <label for="chocie1" id="choice11"></label>
+            </div>
+
+            <div class="form-input">
+              <input aria-labelledby="choice22" id="choice2" name="choice" type="radio" required>
+              <label for="choice2" id="choice22"></label>
+            </div>
+
+            <div class="form-input">
+              <input aria-labelledby="choice33" id="choice3" name="choice" type="radio" required>
+              <label for="choice3" id="choice33"></label>
+            </div>
 
           </fieldset>
+          <button type="submit" class="enter-button"><span class="button-text">ENTER!</span></button>
+
         </form>
       </div>
     </div>

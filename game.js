@@ -263,7 +263,7 @@ function displayQuestion() {
         choiceClassElements.splice(randIndex, 1)
         console.log('debug for choiceElements', choiceElements)
         $(`input${choice_C_E}`).attr('value', `${STORE[questionNum].choices[randomOrderArray[j]]}`)
-        $(`span${choice}`).html(`${STORE[questionNum].choices[randomOrderArray[j]]}`)
+        $(`label${choice}`).html(`${STORE[questionNum].choices[randomOrderArray[j]]}`)
         $('.poster').css('background-image', `url( ${STORE[questionNum].posterUrl} )`)
       }
     } else {
@@ -379,7 +379,7 @@ function generateStore(responsesArray) {
     let response = responsesArray[i]
     console.log(`responsesArray${i}`, responsesArray[i] )
     let picPath = response.data.results[randIndex].poster_path
-    let pic = `http://image.tmdb.org/t/p/w185/${picPath}`
+    let pic = `http://image.tmdb.org/t/p/w300/${picPath}`
     console.log('i should run once')
     for(j=1; j<4; j++){
       console.log('i should run 3 times')

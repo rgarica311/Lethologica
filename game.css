@@ -14,7 +14,7 @@ body {
   padding: 0;
   line-height: 1.5em;
   font-family: 'Montserrat', sans-serif;
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 
 header {
@@ -76,7 +76,12 @@ label.genre-label, label.difficulty-label {
 }
 
 form, fieldset {
-  height: 100%;
+  height: 95%;
+}
+
+.form-input {
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .genre-select-container{
@@ -98,8 +103,8 @@ form, fieldset {
 }
 
 .poster {
-  height: 261px;
-  width: 185px;
+  height: 450px;
+  width: 300px;
   background-repeat: no-repeat;
   margin-right: 20px;
   border: solid 2vmin black;
@@ -142,7 +147,7 @@ form, fieldset {
   height: 10vh;
   position: relative;
   margin: 0 auto;
-  top: 40vh;
+  top: 30vh;
 }
 
 .instructions p {
@@ -183,10 +188,7 @@ form, fieldset {
 }
 
 
-label {
-  display: block;
-  margin-bottom: 20px;
-}
+
 
 @media screen and (max-width: 414px) {
   .game-content  {
@@ -199,6 +201,7 @@ label {
 
   .poster {
     margin-right: 0;
+    width: 185px;
   }
 
   .stats {
@@ -209,9 +212,16 @@ label {
     top: 25vh;
   }
 
-  label {
-    margin-bottom: 8px;
+  .choices-container {
+    max-width: 90vw;
   }
+
+  .form-input {
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+
 
   .times-up, .game-over {
     top: -300px;

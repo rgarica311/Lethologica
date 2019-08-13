@@ -14,7 +14,7 @@ body {
   padding: 0;
   line-height: 1.5em;
   font-family: 'Montserrat', sans-serif;
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 
 header {
@@ -109,7 +109,7 @@ a {
 .results{
   height: 67vh;
   position: relative;
-  top: 200px;
+  top: 150px;
   display: flex;
   flex-wrap: wrap;
   padding: 30px;
