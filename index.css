@@ -55,9 +55,10 @@ button {
 input {
   border: 1px solid black;
   border-radius: 5px;
-  width: 35vw;
+  width: 600px;
   height: 35px;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  margin-right: 10px;
   font-family: 'Montserrat', sans-serif
 }
 
@@ -77,13 +78,13 @@ a {
 }
 
 .input-container {
-  width: 40vw;
+  width: 80vw;
   position: relative;
   margin: 0 auto;
   top: 150px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .app-title {
@@ -152,9 +153,22 @@ a {
   cursor: pointer;
 }
 
+#searchInstructions {
+  font-size: 1rem;
+  position: relative;
+  top: 150px;
+  width: max-content;
+  margin: 0 auto;
+  display: block;
+}
+
 @media screen and (max-width: 412px) {
   input {
     width: 60vw;
+    font-size: .6rem;
+  }
+
+  #searchInstructions {
     font-size: .8rem;
   }
 
