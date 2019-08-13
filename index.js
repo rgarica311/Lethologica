@@ -209,6 +209,9 @@ async function getActorIds(terms) {
   try {
     for(i=0; i<terms.length; i++){
       const response = await axios.get(url.concat(terms[i]))
+      if(response.data.results.length < 1) {
+        alert('Search returned no results')
+      }
       console.log('debug getActorIds response', response)
       responses.push(response.data.results[0].id)
     }
@@ -223,15 +226,24 @@ async function getActorIds(terms) {
 function getActors() {
   $('.search').on('click', function(e){
     $('.results').empty()
-    let actors = $('.input').val().split(',')
-    getActorIds(actors).then(function(result){
-      getCredits(result)
+    let actors
+    actors = $('.input').val().split(',')
+    console.log('actors length in getactors', actors.length)
+    console.log('actors in getactors', actors)
+    console.log('actors[1] length', actors[1].length)
+    if(actors.length != 2) {
+      alert('You must search for only 2 names')
+    } else if (actors.length === 2 && actors[0].length === 0 || actors[1].length === 0) {
+      alert('you must search for only 2 names')
+    } else {
+        getActorIds(actors).then(function(result){
+          getCredits(result)
+        })
+      }
     })
 
-    console.log(actors)
-  })
+  }
 
 
-}
 
 $(getActors)
