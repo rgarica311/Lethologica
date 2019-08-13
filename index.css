@@ -181,6 +181,14 @@ a {
     justify-content: center;
   }
 
+  .error-image {
+    height: 190px;
+    width: 240px;
+    bottom: 350px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
 
 }
 
